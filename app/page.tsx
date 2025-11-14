@@ -11,12 +11,11 @@ export default function Home() {
         {/* App Screenshot */}
         <div className="flex-shrink-0">
           <div className="relative">
-            <Image
-              src="/screen-1.png"
+            <img
+              src="/landing/screen-1.png"
               alt="Baluno App Screenshot"
               width={300}
               height={650}
-              priority
               className="drop-shadow-2xl"
             />
           </div>
