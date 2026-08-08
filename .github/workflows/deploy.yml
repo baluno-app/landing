@@ -35,7 +35,8 @@ jobs:
         env:
           NEXT_PUBLIC_APP_STORE_URL: ${{ secrets.NEXT_PUBLIC_APP_STORE_URL }}
           NEXT_PUBLIC_PLAY_STORE_URL: ${{ secrets.NEXT_PUBLIC_PLAY_STORE_URL }}
-          NEXT_PUBLIC_SITE_URL: https://baluno.the-ihor.com
+          # NEXT_PUBLIC_SITE_URL removed (ENG-9): it pointed at the dead
+          # baluno.the-ihor.com and no code in this repo ever read it.
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
