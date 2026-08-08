@@ -31,9 +31,10 @@ this repo, these are the first things to fix, and none of them are style prefere
   was never registered, so both addresses bounce. Canonical domain is `baluno.me`
   (ADR 0004), which matters for store review: the app links to
   `baluno.me/{terms,privacy,citations}` and those must resolve.
-- The deploy workflow hardcodes `NEXT_PUBLIC_SITE_URL: https://baluno.the-ihor.com`, a
-  host that no longer resolves. Retiring it is tracked as **ENG-9**; it is a config
-  change to a live deploy, so raise it rather than folding it into an unrelated commit.
+- ~~The deploy workflow hardcodes `NEXT_PUBLIC_SITE_URL`~~ — removed 2026-08-08 (ENG-9).
+  It pointed at the dead `baluno.the-ihor.com` and no code in this repo ever read it, so
+  the deletion has no effect on the built site. The two `NEXT_PUBLIC_*` store URLs that
+  `app/page.tsx` *does* read still come from repository secrets.
 
 Deliberately no line numbers above — they go stale faster than the copy does. Grep for the
 strings.
